@@ -31,7 +31,7 @@ router.get('/orders', async (req, res) => {
     
     
         ])
-        res.status(200).send(user)
+        res.status(200).send(user);
     } 
     catch (error) {
         res.status(400).send("Something went wrong")

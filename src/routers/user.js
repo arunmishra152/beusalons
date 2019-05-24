@@ -35,7 +35,7 @@ router.post('/updateOrder', async (req, res) => {
             var query = {userId: userdata.userId}
             await User.findOneAndUpdate(query, { $set:  {'NoOfOrders' : userdata.numberOfOrders }})
         }
-        res.status(200).send({success:true, message: "Successfully updated"})
+        res.status(200).send({success:true, message: "Successfully updated"});
     }
     catch (error) {
         res.status(400).send("Something went wrong")
